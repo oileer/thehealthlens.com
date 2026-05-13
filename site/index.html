@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>TheHealthLens - Independent Health & Supplement Reviews</title>
+<meta name="description" content="Discover in-depth, independent reviews of top health supplements and products. We analyze the ingredients, evidence, and real user results." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://thehealthlens.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="TheHealthLens - Independent Health & Supplement Reviews" />
+<meta property="og:description" content="Discover in-depth, independent reviews of top health supplements and products." />
+<meta property="og:site_name" content="TheHealthLens" />
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+  :root {
+    --navy:    #1a2535;
+    --emerald: #1FB86A;
+    --emerald-dark: #0d8f4e;
+    --off-white: #f0f4f1;
+  }
+
+  body { font-family: 'DM Sans', sans-serif; background: #f8f9fa; }
+
+  /* Navbar */
+  .site-nav { background: var(--navy) !important; border-bottom: 3px solid var(--emerald); }
+  .site-nav .navbar-brand { font-family: 'Lora', serif; font-weight: 700; color: #fff !important; font-size: 1.2rem; }
+  .site-nav .navbar-brand span { color: var(--emerald); }
+  .site-nav .nav-label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #7a8f9a; }
+
+  /* Hero Section */
+  .hero-section {
+    background: var(--navy);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 100%, rgba(31,184,106,.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-title {
+    font-family: 'Lora', serif;
+    font-weight: 800;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+  .hero-title span { color: var(--emerald); }
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: #9aadb5;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Section title */
+  .section-title { font-family: 'Lora', serif; font-weight: 800; color: var(--navy); font-size: 1.8rem; margin: 3rem 0 2rem; text-align: center; }
+  .section-title .accent { color: var(--emerald-dark); }
+
+  /* Cards */
+  .review-card {
+    border: 1.5px solid #dde5e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(26,37,53,.05);
+    background: #fff;
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
+  .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(26,37,53,.1);
+    border-color: var(--emerald);
+    color: inherit;
+  }
+  .review-card-img {
+    height: 200px;
+    background: #edf7f2;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--emerald-dark);
+  }
+  .review-card-body {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .review-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--emerald-dark);
+    margin-bottom: 8px;
+  }
+  .review-title {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .review-excerpt {
+    font-size: 0.9rem;
+    color: #6b7f72;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  .read-more {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color .2s;
+  }
+  .review-card:hover .read-more {
+    color: var(--emerald-dark);
+  }
+
+  /* Footer */
+  footer { background: var(--navy); color: #4a5e68; font-size: 0.78rem; border-top: 2px solid #1e2d3a; }
+  footer a { color: var(--emerald); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg site-nav sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+      <img src="assets/brand/logo.png" alt="TheHealthLens" width="34" height="34" style="object-fit:contain;" />
+      <span>The<span>Health</span>Lens</span>
+    </a>
+    <span class="nav-label d-none d-md-block">Independent Health Reviews</span>
+    <div class="ms-auto">
+        <a href="#latest-reviews" class="btn btn-sm" style="color: #fff; font-weight: 600;">Reviews</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section">
+  <div class="container position-relative z-1">
+    <h1 class="hero-title">Independent Health <span>&amp;</span> Supplement Reviews</h1>
+    <p class="hero-subtitle">We cut through the marketing noise. Discover science-backed analyses, ingredient breakdowns, and honest verdicts to help you make informed decisions.</p>
+  </div>
+</header>
+
+<main class="container my-5" id="latest-reviews">
+  <h2 class="section-title">Latest <span class="accent">Reviews</span></h2>
+  
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+    
+    <!-- ProstaVive -->
+    <div class="col">
+      <a href="/prostavive-review.html" class="review-card">
+        <div class="review-card-img">♂️</div>
+        <div class="review-card-body">
+          <div class="review-category">Prostate Health</div>
+          <h3 class="review-title">ProstaVive Review: Does It Actually Work?</h3>
+          <p class="review-excerpt">We analyze the multi-compound approach featuring saw palmetto, beta-sitosterol, and tongkat ali to see if this prostate support powder lives up to the claims.</p>
+          <div class="read-more">Read Review →</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- ProDentim -->
+    <div class="col">
+      <a href="/prodentim-review.html" class="review-card">
+        <div class="review-card-img">🦷</div>
+        <div class="review-card-body">
+          <div class="review-category">Oral Health</div>
+          <h3 class="review-title">ProDentim Review: The Oral Probiotic Solution?</h3>
+          <p class="review-excerpt">Does balancing your mouth's bacterial ecosystem really strengthen gums and freshen breath? A deep dive into ProDentim's clinical strains.</p>
+          <div class="read-more">Read Review →</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- SleepLean -->
+    <div class="col">
+      <a href="/sleeplean-review.html" class="review-card">
+        <div class="review-card-img">🌙</div>
+        <div class="review-card-body">
+          <div class="review-category">Sleep & Metabolism</div>
+          <h3 class="review-title">SleepLean Review: Better Sleep & Fat Burning?</h3>
+          <p class="review-excerpt">Exploring the dual-action nighttime formula that combines melatonin and ashwagandha with metabolic activators like berberine.</p>
+          <div class="read-more">Read Review →</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Cellucare -->
+    <div class="col">
+      <a href="/cellucare-review.html" class="review-card">
+        <div class="review-card-img">🩸</div>
+        <div class="review-card-body">
+          <div class="review-category">Blood Sugar Support</div>
+          <h3 class="review-title">Cellucare Review: Natural Blood Sugar Balance?</h3>
+          <p class="review-excerpt">An in-depth look at this metabolic support formula and its impact on healthy blood sugar levels and energy stability.</p>
+          <div class="read-more">Read Review →</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Echoxen -->
+    <div class="col">
+      <a href="/echoxen-review.html" class="review-card">
+        <div class="review-card-img">💡</div>
+        <div class="review-card-body">
+          <div class="review-category">Cognitive Health</div>
+          <h3 class="review-title">Echoxen Review: Advanced Nootropic Analysis</h3>
+          <p class="review-excerpt">We examine the ingredients driving this brain health supplement and determine its actual effectiveness for focus and mental clarity.</p>
+          <div class="read-more">Read Review →</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="py-4 text-center mt-auto">
+  <div class="container">
+    <div class="d-flex justify-content-center gap-4 flex-wrap mb-2">
+      <a href="/">Home</a>
+      <a href="/#latest-reviews">Reviews</a>
+      <a href="#">About</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Affiliate Disclosure</a>
+    </div>
+    <p class="mb-0">&copy; 2026 TheHealthLens. Independent health content for informational purposes only.</p>
+  </div>
+</footer>
+
+</body>
+</html>
