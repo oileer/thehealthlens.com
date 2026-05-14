@@ -1,0 +1,26 @@
+{
+  "buildCommand": null,
+  "outputDirectory": "site",
+  "rewrites": [
+    { "source": "/reviews/cellucare-review", "destination": "/cellucare-review.html" },
+    { "source": "/reviews/cellucare-review/", "destination": "/cellucare-review.html" },
+    { "source": "/reviews/echoxen-review", "destination": "/echoxen-review.html" },
+    { "source": "/reviews/echoxen-review/", "destination": "/echoxen-review.html" },
+    { "source": "/reviews/prodentim-review", "destination": "/prodentim-review.html" },
+    { "source": "/reviews/prodentim-review/", "destination": "/prodentim-review.html" },
+    { "source": "/reviews/prostavive-review", "destination": "/prostavive-review.html" },
+    { "source": "/reviews/prostavive-review/", "destination": "/prostavive-review.html" },
+    { "source": "/reviews/sleeplean-review", "destination": "/sleeplean-review.html" },
+    { "source": "/reviews/sleeplean-review/", "destination": "/sleeplean-review.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
